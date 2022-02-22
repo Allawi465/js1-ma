@@ -1,17 +1,16 @@
 const resultCotainer = document.querySelector(".container");
 
-const url = "https://www.freetogame.com/api/games?category=shooter";
-const proxy = "https://noroffcors.herokuapp.com/";
-
-const corsFiks = proxy + url;
+const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
+    "headers": {
+       "x-rapidapi-key": "d252199cafmshb9ddfac0121f925p1d5962jsn8b7da9697655"
+    }
+});
 
 async function getGames() {
     try {
-        const response = await fetch(corsFiks);
-
+        const response = await url;
+        
         const data = await response.json();
-
-        console.log(data);
 
         createHtml(data);
         
@@ -28,12 +27,11 @@ function createHtml(data) {
 
     resultCotainer.innerHTML = "";
 
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0 ; i < data.length; i++) {
 
         if (i === 10) {
             break;
         }
-
         resultCotainer.innerHTML += `<div class="product">
                                         <h3>${data[i].title}</h3>
                                         <p>Platform: ${data[i].platform}</p>

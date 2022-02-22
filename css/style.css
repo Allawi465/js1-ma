@@ -1,7 +1,6 @@
 body {
     max-width: 1000px;
     margin: 20px auto;
-    background-color:#a3a3a3;
 }
 
 .details-body {
@@ -15,10 +14,6 @@ h1 {
 .container {
     display: flex;
     flex-wrap: wrap;
-}
-
-.message {
-    font-size: 20px;
 }
 
 .product {
@@ -36,16 +31,7 @@ h1 {
     margin: 10px
 }
 
-.details-container {
-    width: 370px;
-}
-
 .details-h1 {
-    text-align: justify;
-}
-
-.details-title {
-    margin-bottom: 0.7em;
     text-align: justify;
 }
 
@@ -56,9 +42,10 @@ h1 {
 }
 
 .back {
-    color: #1a8769;
+    color: #000000;
     display: inline-block;
     margin-bottom: 1rem;
+    font-weight: bolder;
 }
 
 .loading {
