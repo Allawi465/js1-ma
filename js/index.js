@@ -29,13 +29,13 @@ function createHtml(data) {
 
     for (let i = 0 ; i < data.length; i++) {
 
-        if (i === 10) {
+        if (i === 12) {
             break;
         }
         resultCotainer.innerHTML += `<div class="product">
                                         <h3>${data[i].title}</h3>
                                         <p>Platform: ${data[i].platform}</p>
-                                        <time class="details-date">Released: ${data[i].release_date}</time>
+                                        <time>Released: ${data[i].release_date}</time>
                                         <a href="details.html?id=${data[i].id}" class="result">Read more</a>
                                     </div>`; 
     }

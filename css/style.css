@@ -22,6 +22,7 @@ h1 {
     background: white;
     border-radius: 1rem;
     min-width: 200px;
+    border: 2px solid rgb(163, 148, 148);
 }
 
 .product a {
@@ -35,7 +36,7 @@ h1 {
     text-align: justify;
 }
 
-.details-image2 {
+.image {
     margin-bottom: 1em;
     height: 200px;
     width: 365px;

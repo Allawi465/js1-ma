@@ -2,18 +2,15 @@ const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
-const id = params.get("id") -1;
+const id = params.get("id");
 
 const resultCotainer = document.querySelector(".details-container");
 
-const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
+const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/game?id=" + id, {
     "headers": {
        "x-rapidapi-key": "d252199cafmshb9ddfac0121f925p1d5962jsn8b7da9697655"
     }
 });
-const proxy = "https://noroffcors.herokuapp.com/";
-
-const corsFiks = proxy + url;
 
 async function getGamesInfo() {
     try {
@@ -21,10 +18,9 @@ async function getGamesInfo() {
 
     const data = await response.json();
 
-    console.log(data)
+    // console.log(data)
 
     createHtml(data)
-
 }
 catch(error) {
     console.log(error);
@@ -36,9 +32,8 @@ catch(error) {
 getGamesInfo()
 
 function createHtml(data) {
-    resultCotainer.innerHTML = `<h1 class="details-h1">${data[id].title}</h1>
-                                <div class="details-image2" 
-                                style="background-image: url('${data[id].thumbnail}')"></div>
-                                <div class="details-description">Description: ${data[id].short_description}</div>
-                                <p>Publisher: ${data[id].publisher}</p>`;
+    resultCotainer.innerHTML = `<h1 class="details-h1">${data.title}</h1>
+                                <div class="image" style="background-image: url('${data.thumbnail}')"></div>
+                                <div>Description: ${data.short_description}</div>
+                                <p>Publisher: ${data.publisher} </p><p>Game id: ${data.id}</p>`;
 };
