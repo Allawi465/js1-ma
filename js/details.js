@@ -5,21 +5,22 @@ const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
-const id = params.get("id") -1;
+const id = params.get("id" -1);
+
+console.log(id);
 
 idContainer.innerHTML = id;
 
 // console.log(id)
 
-const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
-    "headers": {
-       "x-rapidapi-key": "d252199cafmshb9ddfac0121f925p1d5962jsn8b7da9697655"
-    }
-});
+const url = "https://www.freetogame.com/api/games?category=shooter";
+const proxy = "https://noroffcors.herokuapp.com/";
+
+const corsFiks = proxy + url;
 
 async function getGamesInfo() {
     try {
-        const response = await url;
+        const response = await fetch(corsFiks);
 
         const data = await response.json();
 
