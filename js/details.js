@@ -1,4 +1,5 @@
 const resultCotainer = document.querySelector(".details-container");
+const idContainer = document.querySelector(".id");
 
 const queryString = document.location.search;
 
@@ -6,11 +7,9 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id") -1;
 
-const idContainer = document.querySelector(".id");
-
 idContainer.innerHTML = id;
 
-console.log(id)
+// console.log(id)
 
 const url = fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
     "headers": {
@@ -30,7 +29,7 @@ async function getGamesInfo() {
         
     } catch(error) {
         console.log(error);
-
+        
         resultCotainer.innerHTML = `<p class="message"> An error occurred when calling the API</p>`
     }
 };
