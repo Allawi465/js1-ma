@@ -3,14 +3,6 @@ body {
     margin: 20px auto;
 }
 
-.details-body {
-    background-color: unset;
-}
-
-h1 {
-    text-align: center;
-}
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -21,8 +13,7 @@ h1 {
     padding: 1rem;
     background: white;
     border-radius: 1rem;
-    min-width: 200px;
-    border: 2px solid rgb(163, 148, 148);
+    border: 1px solid rgb(163, 148, 148);
 }
 
 .product a {
@@ -30,6 +21,10 @@ h1 {
     color: black;
     font-weight: bolder;
     margin: 10px
+}
+
+.details-container {
+    width: 377px;
 }
 
 .details-h1 {
@@ -44,18 +39,17 @@ h1 {
 
 .back {
     color: #000000;
-    display: inline-block;
-    margin-bottom: 1rem;
     font-weight: bolder;
 }
 
 .loading {
-    border: 10px solid #f3f3f3;
-    border-top: 10px solid rgb(51, 139, 0);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
+    border: 8px solid #ddcccc;
+    border-top: 8px solid rgb(51, 139, 0);
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-top: 50px;
 }
 
 @keyframes spin {
