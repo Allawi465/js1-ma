@@ -7,42 +7,46 @@
     <link href='CSS/style.css' rel='stylesheet'/>
     <title>Form</title>
 </head>
-<main class="container">
+<main class="formContainer">
+  <h1>Form</h1>
     <div id="message"></div>
+
     <form>
-        
       <div>
         <label>
-          First name (required)
-          <input name="Name" id="name" />
+          Name (required)
+          <input name="name" id="name"/>
         </label>
-        <div class="form-error" id="firstNameError">Please enter you name</div>
+        <div class="formError" id="nameError">Please enter your name</div>
       </div>
 
       <div>
-        <textarea placeholder="Message"
-        cols="40" rows="4"></textarea>
+        <label>
+          Subject
+        </label>
+        <textarea placeholder="message"
+          cols="60" rows="4" class="subject"></textarea>
+        <div class="formError" id="subjectError">subject (minimum 10 characters)</div>
      </div>
 
       <div>
         <label>
-          Email (required)
+          Email 
           <input name="email" id="email" />
         </label>
-        <div class="form-error" id="emailError">Please enter a valid email address</div>
+        <div class="formError" id="eMailError">Please enter a valid email address</div>
       </div>
 
       <div>
       <label>
-        address (minimum 25 characters)
+        Address 
         <input name="address" id="address" />
       </label>
-      <div class="form-error" id="lastNameError">Your address must be at least 25 characters</div>
+      <div class="formError" id="adressError">The address must be at least 25 characters</div>
      </div>
-
-      <button disabled>Send</button>
+      <button type="submit">Send</button>
     </form>
   </main>
-  <script src=""></script>
+  <script src="js/form.js"></script>
 </body>
 </html>

@@ -15,9 +15,7 @@ async function getGames() {
         createHtml(data);
         
     } catch(error) {
-        console.log(error);
-
-        resultCotainer.innerHTML = `<p class="message"> An error occurred when calling the API</p>`
+        resultCotainer.innerHTML = `<p> An error occurred when calling the API</p>`
     }
 };
 
@@ -36,7 +34,7 @@ function createHtml(data) {
                                         <h3>${data[i].title}</h3>
                                         <p>Platform: ${data[i].platform}</p>
                                         <time>Released: ${data[i].release_date}</time>
-                                        <a href="details.html?id=${data[i].id}" class="result">Read more</a>
+                                        <a href="details.html?id=${data[i].id}">Read more</a>
                                     </div>`; 
     }
 };

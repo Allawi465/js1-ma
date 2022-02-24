@@ -18,8 +18,6 @@ async function getGamesInfo() {
 
     const data = await response.json();
 
-    // console.log(data)
-
     createHtml(data)
 }
 catch(error) {
