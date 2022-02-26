@@ -32,6 +32,6 @@ getGamesInfo()
 function createHtml(data) {
     resultCotainer.innerHTML = `<h1 class="details-h1">${data.title}</h1>
                                 <div class="image" style="background-image: url('${data.thumbnail}')"></div>
-                                <div>Description: ${data.short_description}</div>
-                                <p>Publisher: ${data.publisher} </p><p>Game id: ${data.id}</p>`;
+                                <div class="description">Description: ${data.short_description}</div>
+                                <p>Publisher: ${data.publisher}</p><p>Game id: ${data.id}</p>`;
 };

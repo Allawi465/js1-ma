@@ -31,19 +31,18 @@ h1 {
 
 /* details page style */
 
-.details-container {
-    width: 377px;
-}
-
 .details-h1 {
     text-align: justify;
-    margin-top: 40px;
 }
 
 .image {
     margin-bottom: 1em;
     height: 200px;
-    width: 365px;
+    background-repeat: no-repeat;
+}
+
+.description {
+    max-width: 355px;
 }
 
 .back {
@@ -60,7 +59,6 @@ h1 {
     margin: auto;
 }
 
-
 label {
     display: block;
     margin-top: 20px;
@@ -73,7 +71,7 @@ label {
     color: red;
 }
 
-input, textarea {
+input {
     width: 100%;
     margin-top: 7px;
     padding: 12px;
@@ -81,13 +79,13 @@ input, textarea {
 }
 
 button {
-    margin-top: 15px;
+    margin-top: 20px;
     border: none;
-    padding: 1rem;
+    padding: 1.2rem;
     width: 150px;
     background: #6ca3ca;
-    border-radius: 5px;
-    font-size: 18px;
+    border-radius: 8px;
+    font-size: 20px;
 }
 
 .message {
