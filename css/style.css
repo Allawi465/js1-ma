@@ -1,11 +1,10 @@
+/* index page style */
 body {
     max-width: 1000px;
     margin: 30px auto;
 }
 
-/* index page style */
-
-h1 {
+.indexH1 {
     text-align: center;
 }
 
@@ -17,22 +16,33 @@ h1 {
 .product {
     margin: 1rem;
     padding: 1rem;
-    background: white;
+    background: #E1E1E1;
     border-radius: 1rem;
     border: 1px solid rgb(163, 148, 148);
 }
 
 .product a {
     display: inline-block;
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: bolder;
     margin: 10px
 }
 
 /* details page style */
 
-.details-h1 {
-    text-align: justify;
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #4A7490;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details-container {
+    border: 1px solid;
+    padding: 1rem;
+    width: fit-content;
+    background-color: #F0F0F0;
 }
 
 .image {
@@ -45,18 +55,18 @@ h1 {
     max-width: 355px;
 }
 
-.back {
-    color: #000000;
-    font-weight: bold;
-    font-size: 18px;
-}
-
 /* contact page style */
 
-.formContainer {
-    max-width: 800px;
+.formMain {
+    max-width: 750px;
     padding: 1rem;
-    margin: auto;
+    margin: 50px auto;
+    border:  1px solid black;
+}
+
+.container-form{
+    max-width: 80%;
+    margin-top: 50px;
 }
 
 label {
@@ -83,19 +93,18 @@ button {
     border: none;
     padding: 1.2rem;
     width: 150px;
-    background: #6ca3ca;
+    background: #4B7490;
     border-radius: 8px;
     font-size: 20px;
+    color: #ffff;
 }
 
 .message {
+    color: #ffff;
+    border-radius: 10px;
     padding: 1rem;
-    color: rgb(0, 0, 0);
-    border-radius: 1rem;
-    background: #6ca3ca;
+    background: #4B7490;
     font-size: 22px;
-    padding-left: 120px;
-    width: 50%;
 }
 
 .loading {
