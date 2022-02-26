@@ -3,7 +3,7 @@ const subject = document.querySelector("#subject");
 const eMail = document.querySelector("#email");
 const address = document.querySelector("#address");
 const form = document.querySelector("form");
-const message = document.querySelector("#message");
+const message = document.querySelector("#formMessage");
 
 function formSetup(event) {
     event.preventDefault();
@@ -36,7 +36,7 @@ function formSetup(event) {
         message.innerHTML = `<div class="message">You passed all the the requirements</div>`;
         form.reset();
     }
-};  
+};
 
 form.addEventListener("submit", formSetup);
 
