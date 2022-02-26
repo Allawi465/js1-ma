@@ -21,8 +21,6 @@ async function getGamesInfo() {
     createHtml(data)
 }
 catch(error) {
-    console.log(error);
-    
     resultCotainer.innerHTML = `<p class="message"> An error occurred when calling the API</p>`
 }
 };
