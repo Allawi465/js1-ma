@@ -35,11 +35,12 @@ function formSetup(event) {
     if (lenghtForm(fullName.value, 1) && lenghtForm(subject.value, 10) && lenghtForm(address.value, 25) && confirmEmail(eMail.value)) {
         message.innerHTML = `<div class="message">You passed all the the requirements</div>`;
         form.reset();
+    } else {
+        message.innerHTML = "";
     }
 };
 
 form.addEventListener("submit", formSetup);
-
 
 function lenghtForm(value, theLen) {
     if(value.trim().length >= theLen) {
