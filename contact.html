@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='CSS/style.css' rel='stylesheet'/>
+    <title>Form</title>
+</head>
+<body class="formMain">
+  <div class="link">
+    <h1>Form</h1>
+    <a href="index.html" class="home">Home</a>
+  </div>
+  <div class="container-form">
+    <div id="formMessage"></div>
+    <form>
+      <div>
+        <label>
+          Name (required)
+          <input name="name" id="name"/>
+        </label>
+        <div class="formError" id="nameError">Please enter your name</div>
+      </div>
+      <div>
+        <label>
+          Subject
+          <input name="subject" id="subject"/>
+        </label>
+        <div class="formError" id="subjectError">Subject (minimum 10 characters)</div>
+     </div>
+      <div>
+        <label>
+          Email 
+          <input name="email" id="email" />
+        </label>
+        <div class="formError" id="eMailError">Please enter a valid email address</div>
+      </div>
+      <div>
+      <label>
+        Address 
+        <input name="address" id="address" />
+      </label>
+      <div class="formError" id="adressError">The address must be at least 25 characters</div>
+     </div>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  </body>
+  <script src="js/form.js"></script>
+</body>
+</html>
